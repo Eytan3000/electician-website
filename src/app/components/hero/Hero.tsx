@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import './Hero.css';
 const smallImageSize = 240;
 
 export default function Hero() {
@@ -10,7 +11,7 @@ export default function Hero() {
           alt="חשמלאי בעבודה"
           width={600}
           height={800}
-        />
+        />  
       </div>
       <div className="hero-content-split">
         <h1>חשמלאי מוסמך לשירותך</h1>

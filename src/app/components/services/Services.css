@@ -1,0 +1,91 @@
+.services-section {
+  margin: 3rem 0;
+  padding: 0 2vw;
+}
+
+.services-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  color: var(--color-dark, #22223b);
+  font-family: var(--font-assistant);
+  text-align: right;
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: right;
+  font-family: var(--font-assistant);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    'card1 card1 card2 card2 card3 card3'
+    'card4 card4 card4 card5 card5 card5';
+  gap: 1.5rem;
+}
+
+.card1 {
+  grid-area: card1;
+}
+.card2 {
+  grid-area: card2;
+}
+.card3 {
+  grid-area: card3;
+}
+.card4 {
+  grid-area: card4;
+}
+.card5 {
+  grid-area: card5;
+}
+
+.service-card {
+  background: #b4846c;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  min-height: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  height: 230px;
+}
+
+.service-icon {
+  margin-top: 0.2em;
+}
+
+.circle-icon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border: 5px solid var(--color-dark);
+  border-radius: 50%;
+  background: transparent;
+  
+  opacity: 0;
+  animation: fadeInDown 0.8s ease-out 0.5s forwards;
+}
+
+.service-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: var(--color-dark);
+  font-family: var(--font-assistant);
+  text-align: right;
+}
+
+.service-card p {
+  font-size: 1.2rem;
+  color: #22223b;
+  font-family: var(--font-assistant);
+  text-align: right;
+}
