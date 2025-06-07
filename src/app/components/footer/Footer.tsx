@@ -1,14 +1,18 @@
 'use client';
 import { useState } from 'react';
-import Modal from './Modal';
+import PolicyModals from './PolicyModals';
 import './Footer.css';
 
 export default function Footer() {
-  const [showModal, setShowModal] = useState(false);
+  const [showAccessibilityModal, setShowAccessibilityModal] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const email = 'arilaurk@gmail.com';
+  const owner = 'אריאל קריאף';
+  const phone = '050-822-5023';
 
   return (
     <>
-      <footer className="site-footer" id="contact">
+      <footer className="site-footer">
         <div className="footer-columns">
           <div className="footer-col footer-col-contact">
             {/* <div className="footer-social"> */}
@@ -32,7 +36,10 @@ export default function Footer() {
           </div>
           <div className="footer-col footer-col-center"></div>
           <div className="footer-col footer-col-links">
-            <p className="footer-link" onClick={() => setShowModal(true)}>
+            <p className="footer-link" onClick={() => setShowPrivacyModal(true)}>
+              מדיניות פרטיות
+            </p>
+            <p className="footer-link" onClick={() => setShowAccessibilityModal(true)}>
               הצהרת נגישות
             </p>
             <div className="footer-copyright">
@@ -41,73 +48,15 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      
-      <Modal
-        isOpen={showModal}
-        onClose={() => setShowModal(false)}
-        title="הצהרת נגישות">
-        <div
-          style={{
-            textAlign: 'right',
-            direction: 'rtl',
-            maxHeight: '60vh',
-            overflowY: 'auto',
-          }}>
-          <p>הצהרת הנגישות עודכנה בתאריך 11/12/23</p>
-          <p>
-             אנו פועלים רבות על מנת להנגיש את
-            הארגון ואת אתר האינטרנט שלנו לאנשים עם מוגבלות על מנת לקדם שוויון
-            זכויות ושקיפות כלפי אנשים עם מוגבלות.
-          </p>
-          <p>
-            <b>מהות אתר אינטרנט נגיש</b>
-            <br />
-            אתר אינטרנט נגיש, הינו אתר המאפשר לאדם עם מוגבלות, לגלוש באותה רמת
-            יעילות והנאה כגולשים אחרים, תוך שימוש ביכולות המערכת עליה הוא פועל
-            ובאמצעות טכנולוגיות מסייעות לנגישות .
-          </p>
-          <p>
-            <b>ביצוע התאמות הנגישות באתר האינטרנט</b>
-            <br />
-            התאמות הנגישות באתר בוצעו בהתאם לסימן ג': שירותי האינטרנט בתקנות
-            שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות) התשע"ג 2013,
-            לתקן הישראלי ת"י 5568 המבוסס על הנחיותWCAG 2.0 , האתר הונגש לרמהAA
-            ובכפוף לשינויים והתאמות שבוצעו במסמך התקן הישראלי.
-          </p>
-          <p>
-            האתר תומך בשימוש בטכנולוגיות מסייעות כגון תוכנות הקראת מסך, בגלישה
-            בעזרת מקלדת על ידי שימוש במקשי ה-Tab וה-Shift+Tab למעבר בין קישורים,
-            מקשי החיצים, מקש ה-Enter לבחירה, מקש ה-Esc ליציאה מתפריטים וחלונות,
-            לחיצה על H או על מספר למעבר בין כותרות.
-          </p>
-          <p>האתר נבדק כל מספר חודשים כדי להבטיח את תחזוקת נגישות האתר.</p>
-          <p>
-            <b>ישימות מיטבית לנגישות באתר האינטרנט</b>
-            <br />
-            באתר אינטרנט זה, ניתן לגלוש בצורה מיטבית ונגישה באמצעות הדפדפנים
-            הנפוצים ומומלץ להשתמש בדפדפנים הבאים       Safari Chrom
-          </p>
-          <p>
-            <b>שלבי ההנגשה בהם נמצא האתר</b>
-            <br />
-            נכון להיום אנו נמצאים בשלבי הנגשה סופיים, חסרות נכון להיום הן
-            הכתוביות לסרטים המוצגים באתר. אנו מערכים שהנגשת האתר תושלם עד לתאריך
-            ה15/12/24.
-          </p>
-          <p>
-            <b>דרכי פניה לבקשות, תקלות נגישות והצעות לשיפור:</b>
-            <br />
-            במידה ומצאתם באתר האינטרנט בעיה בנושא הנגישות או שהנכם זקוקים עזרה,
-            אתם מוזמנים לפנות אלינו:
-            <br />
-            אריאל קריאף
-            <br />
-            050-822-5023
-            <br />
-            arilaurk@gmail.com
-          </p>
-        </div>
-      </Modal>
+      <PolicyModals
+        showAccessibilityModal={showAccessibilityModal}
+        setShowAccessibilityModal={setShowAccessibilityModal}
+        showPrivacyModal={showPrivacyModal}
+        setShowPrivacyModal={setShowPrivacyModal}
+        email={email}
+        owner={owner}
+        phone={phone}
+      />
     </>
   );
 }
