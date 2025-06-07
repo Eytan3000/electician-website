@@ -58,6 +58,7 @@
   text-decoration: underline;
   margin-bottom: 0.3rem;
   font-size: 1.05rem;
+  cursor: pointer;
 }
 
 .footer-link:hover {
