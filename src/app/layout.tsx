@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Assistant } from 'next/font/google';
 import './globals.css';
 import Nav from './components/nav/Nav';
+import dynamic from 'next/dynamic';
+const Footer = dynamic(() => import('../app/components/footer/Footer'));
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -37,6 +39,7 @@ export default function RootLayout({
           <Nav />
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
