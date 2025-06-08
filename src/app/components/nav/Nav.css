@@ -3,7 +3,6 @@
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #e0e7ef;
-  padding: 0.5rem 0;
   direction: rtl;
   position: sticky;
   top: 0;
@@ -86,12 +85,12 @@
     height: 100vh;
     background: rgba(0,0,0,0.35);
     z-index: 120;
-    /* below menu (z-index: 150) */
     transition: background 0.2s;
   }
   .navbar {
     position: relative;
-    min-height: 80px;
+    height: 60px;
+    padding: 0 1rem;
   }
   .navbar-hamburger {
     position: absolute;

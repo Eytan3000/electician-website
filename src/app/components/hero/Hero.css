@@ -46,10 +46,10 @@
 
 .hero-split {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; /* Right side = image */
   align-items: stretch;
+  justify-content: space-between;
   min-height: 80vh;
-  background: #fff;
   direction: rtl;
 }
 
