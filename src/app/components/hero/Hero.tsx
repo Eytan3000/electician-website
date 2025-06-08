@@ -5,6 +5,7 @@ import SmallImages from './SmallImages';
 export default function Hero() {
   return (
     <section className="hero-split">
+      eytan
       <MainImage />
       <div className="hero-content-split">
         <h1>חשמלאי מוסמך לשירותך</h1>

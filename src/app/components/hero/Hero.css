@@ -46,7 +46,7 @@
 
 .hero-split {
   display: flex;
-  flex-direction: row-reverse; /* Right side = image */
+  flex-direction: row-reverse;
   align-items: stretch;
   justify-content: space-between;
   min-height: 80vh;
@@ -118,15 +118,14 @@
 
 .hero-small-image-1 {
   position: absolute;
-  /* top: -40; */
-  left: -30;
+  left: -30px;
   z-index: 1;
 }
 
 .hero-small-image-2 {
   position: absolute;
   bottom: 0;
-  right: -30;
+  right: -30px;
   z-index: 2;
 
   border: 20px solid #fff;
