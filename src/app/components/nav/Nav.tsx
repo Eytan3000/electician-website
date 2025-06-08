@@ -1,23 +1,35 @@
+'use client';
+import { useState } from 'react';
 import './Nav.css';
 
 export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <span className="navbar-logo">אריאל עבודות חשמל</span>
-      <ul className="navbar-links">
+      <button
+        className="navbar-hamburger"
+        aria-label="תפריט"
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <span className="hamburger-bar" />
+        <span className="hamburger-bar" />
+        <span className="hamburger-bar" />
+      </button>
+      {menuOpen && <div className="navbar-overlay" onClick={() => setMenuOpen(false)} />}
+      <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
         <li>
-          <a href="#services">שירותים</a>
+          <a href="#services" onClick={() => setMenuOpen(false)}>שירותים</a>
         </li>
         <li>
-          <a href="#about">אודות</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>אודות</a>
         </li>
         <li>
-          <a href="#contact">יצירת קשר</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>יצירת קשר</a>
         </li>
       </ul>
-      <a href="tel:050-8225023" className="navbar-phone">
-        050-822-5023
-      </a>
+      <a href="tel:050-8225023" className={`navbar-phone${menuOpen ? ' open' : ''}`}>050-822-5023</a>
     </nav>
   );
 }

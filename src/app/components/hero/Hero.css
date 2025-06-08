@@ -1,3 +1,4 @@
+/* Hero is now mobile responsive with media queries for max-width 700px */
 .hero {
   display: flex;
   align-items: center;
@@ -97,7 +98,7 @@
   position: relative;
   width: 320px;
   height: 320px;
-  margin: auto auto 2rem;
+  margin: 1rem;
 }
 
 .hero-small-images img {
@@ -117,7 +118,7 @@
 
 .hero-small-image-1 {
   position: absolute;
-  top: -40;
+  /* top: -40; */
   left: -30;
   z-index: 1;
 }
@@ -134,4 +135,36 @@
 .site-border-wrapper {
   margin-left: 2vw;
   margin-right: 2vw;
+}
+
+@media (max-width: 700px) {
+  .hero-split {
+    flex-direction: column;
+    min-height: 60vh;
+  }
+  .hero-image {
+    margin: 10px 0;
+  }
+  .hero-content-split {
+    padding: 1.5rem 0.5rem;
+  }
+  .hero-content-split h1 {
+    font-size: 2rem;
+  }
+  .hero-small-images {
+    display: none;
+  }
+  .hero-content-split p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+  .site-border-wrapper {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+  }
+
 }

@@ -67,3 +67,13 @@ h1 {
   }
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 15px;
+  }
+}
+

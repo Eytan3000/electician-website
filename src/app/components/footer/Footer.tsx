@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="site-footer">
+      <footer className="site-footer" id="contact">
         <div className="footer-columns">
           <div className="footer-col footer-col-contact">
             {/* <div className="footer-social"> */}

@@ -1,3 +1,4 @@
+/* Footer is now mobile responsive with media queries for max-width 700px */
 .site-footer {
   width: 100%;
   background: #faf6ea;
@@ -69,4 +70,24 @@
   margin-top: 1.2rem;
   color: #444;
   font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+  }
+  .footer-columns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  .footer-col {
+    min-width: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .footer-col-center {
+    display: none;
+  }
 }

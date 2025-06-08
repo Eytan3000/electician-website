@@ -1,3 +1,4 @@
+/* Nav is now mobile responsive with media queries for max-width 700px */
 .navbar {
   width: 100%;
   background: #fff;
@@ -47,4 +48,111 @@
   font-family: var(--font-assistant);
   text-decoration: none;
   font-size: 1.1rem;
+}
+
+/* Hamburger styles */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+.hamburger-bar {
+  width: 28px;
+  height: 3px;
+  background: #22223b;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Overlay for mobile menu */
+.navbar-overlay {
+  display: none;
+}
+@media (max-width: 700px) {
+  .navbar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.35);
+    z-index: 120;
+    /* below menu (z-index: 150) */
+    transition: background 0.2s;
+  }
+  .navbar {
+    position: relative;
+    min-height: 80px;
+  }
+  .navbar-hamburger {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    left: auto;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+  .navbar-logo {
+    margin-right: auto;
+  }
+  .navbar-links.open {
+    z-index: 150;
+  }
+  .navbar-phone.open {
+    z-index: 150;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .navbar-phone {
+    align-self: flex-end;
+    font-size: 1rem;
+  }
+  .navbar-hamburger {
+    display: flex;
+    margin-right: auto;
+    margin-left: 0.5rem;
+  }
+  .navbar-links,
+  .navbar-phone {
+    display: none;
+  }
+  .navbar-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    z-index: 150;
+    padding: 1.5rem 0 1rem 0;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .navbar-phone.open {
+    display: block;
+    position: absolute;
+    top: calc(80px + 140px);
+    right: 0;
+    left: 0;
+    background: #fff;
+    text-align: center;
+    padding: 0.7rem 0 1.2rem 0;
+    z-index: 150;
+    font-size: 1.1rem;
+  }
 }

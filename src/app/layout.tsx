@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Assistant } from 'next/font/google';
 import './globals.css';
 import Nav from './components/nav/Nav';
 import dynamic from 'next/dynamic';
+
 const Footer = dynamic(() => import('../app/components/footer/Footer'));
 
 const geistSans = Geist({
