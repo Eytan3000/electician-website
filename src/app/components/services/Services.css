@@ -64,35 +64,11 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    'card1 card1 card2 card2 card3 card3'
-    'card4 card4 card4 card5 card5 card5'
-    'card6 card6 card6 card7 card7 card7';
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-.card1 {
-  grid-area: card1;
-}
-.card2 {
-  grid-area: card2;
-}
-.card3 {
-  grid-area: card3;
-}
-.card4 {
-  grid-area: card4;
-}
-.card5 {
-  grid-area: card5;
-}
-.card6 {
-  grid-area: card6;
-}
-.card7 {
-  grid-area: card7;
-}
+
 
 .service-card {
   background: var(--card-background);

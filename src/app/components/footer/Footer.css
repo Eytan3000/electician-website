@@ -62,7 +62,7 @@
 }
 
 .footer-link:hover {
-  color: #fca311;
+  color: var(--hover-color);
 }
 
 .footer-copyright {

@@ -15,18 +15,15 @@ export default function Footer() {
       <footer className="site-footer" id="contact">
         <div className="footer-columns">
           <div className="footer-col footer-col-contact">
-            <div>
-              <a href="tel:050-822-5023" className="footer-link">
-                050-822-5023
-              </a>
-            </div>
-            <div>
-              <a
-                href="mailto:ariel.electricity@gmail.com"
-                className="footer-link">
-                ariel.electricity@gmail.com
-              </a>
-            </div>
+            <a href="tel:050-822-5023" className="footer-link">
+              050-822-5023
+            </a>
+
+            <a
+              href="mailto:ariel.electricity@gmail.com"
+              className="footer-link">
+              ariel.electricity@gmail.com
+            </a>
           </div>
           <div className="footer-col footer-col-center"></div>
           <div className="footer-col footer-col-links">

@@ -27,7 +27,7 @@
 .cta-button {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: var(--color-button);
+  background: var(--color-dark);
   color: #fff;
   border-radius: 30px;
   font-size: 1.1rem;
@@ -41,7 +41,7 @@
 }
 
 .cta-button:hover {
-  background: #ffb703;
+  background: var(--hover-color);
 }
 
 .hero-split {
