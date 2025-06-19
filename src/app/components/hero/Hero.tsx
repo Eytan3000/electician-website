@@ -7,7 +7,10 @@ export default function Hero() {
     <section className="hero-split">
       <MainImage />
       <div className="hero-content-split">
-        <h1>חשמלאי מוסמך לשירותך</h1>
+        <div className="hero-content-split-header">
+          <h1>חשמלאי מוסמך לשירותך</h1>
+          <p> 📍 שירות מהיר בכל אזור השרון</p>
+        </div>
         <SmallImages />
         <p>
           חשמלאי מוסמך בעל 30 שנות ניסיון. מתמחה בעבודות חשמל לבית ולעסק, איתור

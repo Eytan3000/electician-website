@@ -1,8 +1,6 @@
 /* Nav is now mobile responsive with media queries for max-width 700px */
 .navbar {
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #e0e7ef;
   direction: rtl;
   position: sticky;
   top: 0;
@@ -83,7 +81,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.35);
     z-index: 120;
     transition: background 0.2s;
   }
@@ -136,7 +134,7 @@
     right: 0;
     left: 0;
     background: #fff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
     z-index: 150;
     padding: 1.5rem 0 1rem 0;
     gap: 1.2rem;
@@ -154,4 +152,13 @@
     z-index: 150;
     font-size: 1.1rem;
   }
+}
+
+.navbar-logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-sub-logo {
+  font-size: 0.8rem;
 }

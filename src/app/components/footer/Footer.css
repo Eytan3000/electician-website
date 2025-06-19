@@ -1,7 +1,6 @@
 /* Footer is now mobile responsive with media queries for max-width 700px */
 .site-footer {
   width: 100%;
-  background: #faf6ea;
   padding: 2.5rem 0 1.5rem 0;
   direction: rtl;
   font-family: var(--font-assistant);
