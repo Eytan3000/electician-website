@@ -1,0 +1,1 @@
+export const PHONE_NUMBER = '050-822-5023';

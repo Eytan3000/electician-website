@@ -2,21 +2,21 @@
 import { useState } from 'react';
 import PolicyModals from './PolicyModals';
 import './Footer.css';
+import { PHONE_NUMBER } from '@/utils/constants';
 
 export default function Footer() {
   const [showAccessibilityModal, setShowAccessibilityModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const email = 'ariel.electricity@gmail.com';
   const owner = 'אריאל קריאף';
-  const phone = '050-822-5023';
 
   return (
     <>
       <footer className="site-footer" id="contact">
         <div className="footer-columns">
           <div className="footer-col footer-col-contact">
-            <a href="tel:050-822-5023" className="footer-link">
-              050-822-5023
+            <a href={`tel:${PHONE_NUMBER}`} className="footer-link">
+              {PHONE_NUMBER}
             </a>
 
             <a
@@ -50,7 +50,7 @@ export default function Footer() {
         setShowPrivacyModal={setShowPrivacyModal}
         email={email}
         owner={owner}
-        phone={phone}
+        phone={PHONE_NUMBER}
       />
     </>
   );

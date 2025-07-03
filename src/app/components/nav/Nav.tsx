@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import './Nav.css';
+import { PHONE_NUMBER } from '@/utils/constants';
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function Nav() {
       <a
         href="tel:050-8225023"
         className={`navbar-phone${menuOpen ? ' open' : ''}`}>
-        050-822-5023
+        {PHONE_NUMBER}
       </a>
     </nav>
   );
