@@ -88,7 +88,9 @@
   .navbar {
     position: relative;
     height: 60px;
-    padding: 0 1rem;
+
+    display: flex;
+    justify-content: end;
   }
   .navbar-hamburger {
     position: absolute;
