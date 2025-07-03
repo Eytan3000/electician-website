@@ -38,7 +38,7 @@ export default function Footer() {
               הצהרת נגישות
             </p>
             <div className="footer-copyright">
-              © 2024 אריאל עבודות חשמל. כל הזכויות שמורות.
+              © 2024 חשמל אריאל. כל הזכויות שמורות.
             </div>
           </div>
         </div>

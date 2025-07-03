@@ -34,6 +34,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
+      <head>
+        <script
+          src="https://cdn.userway.org/widget.js"
+          data-account="69OPkI3qSo"
+          async
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${assistant.variable}`}>
         <div className="site-border-wrapper">

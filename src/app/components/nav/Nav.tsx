@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <nav className="navbar">
       <div className="navbar-logo-container">
-        <span className="navbar-logo">אריאל עבודות חשמל</span>
+        <span className="navbar-logo">חשמל אריאל</span>
         <span className="navbar-sub-logo">
           חשמלאי ראשי מוסמך – רישיון מס’ 111025
         </span>
