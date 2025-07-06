@@ -1,12 +1,10 @@
 import { PHONE_NUMBER } from '@/utils/constants';
 import './Hero.css';
-import MainImage from './MainImage';
 import SmallImages from './SmallImages';
 
 export default function Hero() {
   return (
     <section className="hero-split">
-      <MainImage />
       <div className="hero-content-split">
         <div className="hero-content-split-header">
           <h1>חשמלאי מוסמך לשירותך</h1>
@@ -15,9 +13,9 @@ export default function Hero() {
         <SmallImages />
         <p>
           <span style={{ fontWeight: 'bold' }}>אריאל קריאף - </span>
-          חשמלאי ראשי (3X250A)	 מוסמך בעל 20 שנות ניסיון. מתמחה בעבודות חשמל לבית ולעסק, איתור
-          תקלות, תכנון והתקנה של מערכות חשמל, שדרוג לוחות חשמל, תאורה חכמה ועוד
-          — תוך הקפדה על בטיחות, אמינות ועמידה בזמנים.
+          חשמלאי ראשי (3X250A) מוסמך בעל 20 שנות ניסיון. מתמחה בעבודות חשמל לבית
+          ולעסק, איתור תקלות, תכנון והתקנה של מערכות חשמל, שדרוג לוחות חשמל,
+          תאורה חכמה ועוד — תוך הקפדה על בטיחות, אמינות ועמידה בזמנים.
         </p>
         <a href={`tel:${PHONE_NUMBER}`} className="cta-button">
           התקשרו עכשיו

@@ -96,9 +96,9 @@
   justify-content: center;
 
   position: relative;
-  width: 320px;
-  height: 320px;
-  margin: 1rem;
+  width: 419px;
+  height: 434px;
+  margin: 2rem;
 }
 
 .hero-small-images img {
@@ -158,8 +158,17 @@
     font-size: 2rem;
   }
   .hero-small-images {
+    width: 419px;
+    height: 300px;
+    margin-top: 0;
+  }
+  .hero-small-image-1{
     display: none;
   }
+  .hero-small-image-2{
+    
+  }
+
   .hero-content-split p {
     font-size: 1rem;
     width: 100%;
@@ -171,6 +180,11 @@
   .site-border-wrapper {
     margin-left: 0.5vw;
     margin-right: 0.5vw;
+  }
+  .hero-small-image-2 {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 
 }

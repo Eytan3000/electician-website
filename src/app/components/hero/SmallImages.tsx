@@ -11,7 +11,7 @@ export default function SmallImages() {
     setIsMobile(window.innerWidth < 700);
   }, []);
 
-  const smallImageSize = isMobile ? 150 : 240;
+  const smallImageSize = 300;
 
   return (
     <div className="hero-small-images">
