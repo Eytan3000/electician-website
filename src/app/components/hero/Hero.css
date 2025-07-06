@@ -143,6 +143,12 @@
   justify-content: center;
 }
 
+.navbar-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 700px) {
   .hero-split {
     flex-direction: column;
@@ -162,11 +168,10 @@
     height: 300px;
     margin-top: 0;
   }
-  .hero-small-image-1{
+  .hero-small-image-1 {
     display: none;
   }
-  .hero-small-image-2{
-    
+  .hero-small-image-2 {
   }
 
   .hero-content-split p {
@@ -186,5 +191,4 @@
     right: auto;
     transform: translateX(-50%);
   }
-
 }
