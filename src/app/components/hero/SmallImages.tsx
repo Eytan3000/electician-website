@@ -1,16 +1,9 @@
 'use client';
 import Image from 'next/image';
 import './Hero.css';
-import { useEffect, useState } from 'react';
 import { smallLowerImg, smallUpperImg } from '@/utils/constants';
 
 export default function SmallImages() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 700);
-  }, []);
-
   const smallImageSize = 300;
 
   return (

@@ -7,6 +7,9 @@ import {
   businessServices,
   industryServices,
 } from './services';
+import FactoryIcon from '../../../app/icons/FactoryIcon';
+import BusinessIcon from '../../../app/icons/BusinessIcon';
+import HomeIcon from '../../../app/icons/HomeIcon';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('פרטי');
@@ -26,6 +29,9 @@ export default function Services() {
             className={`services-tab${activeTab === tab ? ' active' : ''}`}
             onClick={() => setActiveTab(tab)}
             type="button">
+            {tab === 'פרטי' && <HomeIcon />}
+            {tab === 'עסקי' && <BusinessIcon />}
+            {tab === 'תעשיה' && <FactoryIcon />}
             {tab}
           </button>
         ))}

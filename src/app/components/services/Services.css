@@ -30,6 +30,9 @@
 }
 
 .services-tab {
+  display: flex;
+  align-items: center;
+
   font-family: var(--font-assistant, inherit);
   font-size: 1.15rem;
   font-weight: 600;
@@ -58,7 +61,7 @@
     var(--warm-yellow) 100%
   );
   border-bottom: 3px solid var(--warm-yellow);
-  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.309);
   z-index: 1;
 }
 
@@ -67,8 +70,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-
-
 
 .service-card {
   background: var(--card-background);
