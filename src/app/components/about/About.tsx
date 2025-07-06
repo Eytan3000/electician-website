@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import './About.css';
+import { aboutImg } from '@/utils/constants';
 
 export default function About() {
   return (
@@ -18,11 +19,11 @@ export default function About() {
       </div>
 
       <div className="about-image">
-        <Image
-          src="/images/about/about.png"
+        <Image  
+          src={aboutImg}
           alt="חשמלאי מקצועי"
-          width={300}
-          height={400}
+          width={800}
+          height={500}
         />
       </div>
     </section>

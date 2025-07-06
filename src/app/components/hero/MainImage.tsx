@@ -1,14 +1,15 @@
 import Image from 'next/image';
-import './Hero.css';        
-    
+import './Hero.css';
+import { mainImg } from '@/utils/constants';
+
 export default function MainImage() {
   return (
     <div className="hero-image">
       <Image
-        src="/images/hero/electrician-main-ph.png"
+        src={mainImg}
         alt="חשמלאי בעבודה"
-        width={600}
-        height={800}
+        width={500}
+        height={600}
         priority={true}
       />
     </div>

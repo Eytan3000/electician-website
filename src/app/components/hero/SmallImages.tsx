@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import './Hero.css';
 import { useEffect, useState } from 'react';
+import { smallLowerImg, smallUpperImg } from '@/utils/constants';
 
 export default function SmallImages() {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,7 +17,7 @@ export default function SmallImages() {
     <div className="hero-small-images">
       <Image
         className="hero-small-image-1"
-        src="/images/hero/electrical-panel.png"
+        src={smallUpperImg}
         alt="עבודת חשמל"
         width={smallImageSize}
         height={smallImageSize}
@@ -25,7 +26,7 @@ export default function SmallImages() {
 
       <Image
         className="hero-small-image-2"
-        src="/images/hero/Electrician-ph.avif"
+        src={smallLowerImg}
         alt="בדיקת לוח חשמל"
         width={smallImageSize}
         height={smallImageSize}
