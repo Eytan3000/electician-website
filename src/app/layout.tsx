@@ -39,7 +39,6 @@ export default function RootLayout({
         <Script
           src="https://cdn.userway.org/widget.js"
           data-account="69OPkI3qSo"
-          async
         />
       </head>
       <body
