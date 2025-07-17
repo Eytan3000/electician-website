@@ -24,8 +24,8 @@ const assistant = Assistant({
 });
 
 export const metadata: Metadata = {
-  title: 'Ariel Electrician',
-  description: 'Ariel Electrician',
+  title: 'אריאל חשמל',
+  description: 'אריאל חשמל',
 };
 
 export default function RootLayout({
