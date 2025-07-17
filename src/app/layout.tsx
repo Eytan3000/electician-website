@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Assistant } from 'next/font/google';
 import './globals.css';
 import Nav from './components/nav/Nav';
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 
 const Footer = dynamic(() => import('../app/components/footer/Footer'));
 
@@ -35,10 +36,11 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl">
       <head>
-        <script
+        <Script
           src="https://cdn.userway.org/widget.js"
           data-account="69OPkI3qSo"
-          async></script>
+          async
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${assistant.variable}`}>
