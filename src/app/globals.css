@@ -10,8 +10,38 @@
   --card-background: #fcfcfc;
 
   --hover-color: rgb(0, 123, 255);
+  
+  /* Language-specific variables */
+  --text-align: right;
+  --text-align-opposite: left;
+  --margin-start: 0;
+  --margin-end: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --direction: rtl;
 }
 
+/* Hebrew (RTL) styles */
+html[lang="he"] {
+  --text-align: right;
+  --text-align-opposite: left;
+  --margin-start: 0;
+  --margin-end: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --direction: rtl;
+}
+
+/* French (LTR) styles */
+html[lang="fr"] {
+  --text-align: left;
+  --text-align-opposite: right;
+  --margin-start: 0;
+  --margin-end: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --direction: ltr;
+}
 
 html,
 body {
@@ -48,6 +78,22 @@ h1 {
   color: var(--color-dark);
 }
 
+/* Language-specific text alignment */
+html[lang="he"] h1,
+html[lang="he"] h2,
+html[lang="he"] h3,
+html[lang="he"] p,
+html[lang="he"] li {
+  text-align: right;
+}
+
+html[lang="fr"] h1,
+html[lang="fr"] h2,
+html[lang="fr"] h3,
+html[lang="fr"] p,
+html[lang="fr"] li {
+  text-align: left;
+}
 
 @keyframes fadeInDown {
   from {

@@ -3,12 +3,14 @@ import { useState } from 'react';
 import PolicyModals from './PolicyModals';
 import './Footer.css';
 import { PHONE_NUMBER } from '@/utils/constants';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function Footer() {
   const [showAccessibilityModal, setShowAccessibilityModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const { t } = useLanguage();
   const email = 'ariel.electricity@gmail.com';
-  const owner = 'אריאל קריאף';
+  const owner = 'Ariel Kriaf';
 
   return (
     <>
@@ -30,15 +32,15 @@ export default function Footer() {
             <p
               className="footer-link"
               onClick={() => setShowPrivacyModal(true)}>
-              מדיניות פרטיות
+              {t('footer.privacy')}
             </p>
             <p
               className="footer-link"
               onClick={() => setShowAccessibilityModal(true)}>
-              הצהרת נגישות
+              {t('footer.accessibility')}
             </p>
             <div className="footer-copyright">
-              © 2024 חשמל אריאל. כל הזכויות שמורות.
+              {t('footer.copyright')}
             </div>
           </div>
         </div>

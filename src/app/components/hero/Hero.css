@@ -6,7 +6,7 @@
   min-height: 70vh;
   background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
   text-align: center;
-  direction: rtl;
+  direction: var(--direction, rtl);
 }
 
 .hero-content h1 {
@@ -50,7 +50,12 @@
   align-items: stretch;
   justify-content: space-between;
   min-height: 80vh;
-  direction: rtl;
+  direction: var(--direction, rtl);
+}
+
+/* Language-specific flex direction */
+html[lang="fr"] .hero-split {
+  flex-direction: row;
 }
 
 .hero-image {

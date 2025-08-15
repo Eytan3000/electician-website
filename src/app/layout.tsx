@@ -4,6 +4,8 @@ import './globals.css';
 import Nav from './components/nav/Nav';
 import dynamic from 'next/dynamic';
 import Script from 'next/script';
+import { LanguageProvider } from './contexts/LanguageContext';
+import DynamicLayout from './components/DynamicLayout';
 
 const Footer = dynamic(() => import('../app/components/footer/Footer'));
 
@@ -45,11 +47,15 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${assistant.variable}`}>
-        <div className="site-border-wrapper">
-          <Nav />
-          {children}
-        </div>
-        <Footer />
+        <LanguageProvider>
+          <DynamicLayout>
+            <div className="site-border-wrapper">
+              <Nav />
+              {children}
+            </div>
+            <Footer />
+          </DynamicLayout>
+        </LanguageProvider>
       </body>
     </html>
   );

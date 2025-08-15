@@ -1,6 +1,8 @@
+import { useLanguage } from '@/app/contexts/LanguageContext';
+
 interface Service {
   id: string;
-  title: string;
+  titleKey: string;
   clauses: string[];
 }
 
@@ -10,20 +12,22 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, idx }: ServiceCardProps) {
+  const { t } = useLanguage();
+  
   return (
     <div className={`service-card card${service.id}`} key={idx}>
       <div className="service-icon">
         <span className="circle-icon"></span>
       </div>
       <div>
-        <h3>{service.title}</h3>
+        <h3>{t(service.titleKey)}</h3>
         <ul
           style={{
             paddingRight: 0,
             margin: 0,
             listStyle: 'disc inside',
           }}>
-          {service.clauses.map((clause, i) => (
+          {service.clauses.map((clauseKey, i) => (
             <li
               key={i}
               style={{
@@ -31,7 +35,7 @@ export default function ServiceCard({ service, idx }: ServiceCardProps) {
                 fontSize: '1.1rem',
                 marginBottom: '0.3em',
               }}>
-              {clause}
+              {t(clauseKey)}
             </li>
           ))}
         </ul>

@@ -1,24 +1,25 @@
 import { PHONE_NUMBER } from '@/utils/constants';
 import './Hero.css';
 import SmallImages from './SmallImages';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function Hero() {
+  const { t } = useLanguage();
+  
   return (
     <section className="hero-split">
       <div className="hero-content-split">
         <div className="hero-content-split-header">
-          <h1>חשמלאי מוסמך לשירותך</h1>
-          <p> 📍 שירות מהיר בכל אזור השרון</p>
+          <h1>{t('hero.title')}</h1>
+          <p>{t('hero.subtitle')}</p>
         </div>
         <SmallImages />
         <p>
-          <span style={{ fontWeight: 'bold' }}>אריאל קריאף - </span>
-          חשמלאי ראשי (3X250A) מוסמך בעל 20 שנות ניסיון. מתמחה בעבודות חשמל לבית
-          ולעסק, איתור תקלות, תכנון והתקנה של מערכות חשמל, שדרוג לוחות חשמל,
-          תאורה חכמה ועוד — תוך הקפדה על בטיחות, אמינות ועמידה בזמנים.
+          <span style={{ fontWeight: 'bold' }}>Ariel Kriaf - </span>
+          {t('hero.description')}
         </p>
         <a href={`tel:${PHONE_NUMBER}`} className="cta-button">
-          התקשרו עכשיו
+          {t('hero.cta')}
         </a>
       </div>
     </section>

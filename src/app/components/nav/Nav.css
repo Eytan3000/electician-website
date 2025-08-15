@@ -19,6 +19,30 @@
   font-family: var(--font-assistant);
 }
 
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-switcher {
+  background: #22223b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-assistant);
+}
+
+.language-switcher:hover {
+  background: #3a3a5a;
+  transform: translateY(-1px);
+}
+
 .navbar-links {
   list-style: none;
   display: flex;
@@ -92,12 +116,25 @@
     display: flex;
     justify-content: end;
   }
-  .navbar-hamburger {
+  .navbar-controls {
     position: absolute;
     top: 50%;
     right: 1rem;
     left: auto;
     transform: translateY(-50%);
+    margin: 0;
+    gap: 0.5rem;
+  }
+  .language-switcher {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .navbar-hamburger {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
     margin: 0;
   }
   .navbar-logo {

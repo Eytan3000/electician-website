@@ -4,9 +4,14 @@
     flex-direction: row-reverse;
     align-items: stretch;
     min-height: 60vh;
-    direction: rtl;
+    direction: var(--direction, rtl);
     margin: 3rem 2rem  ;
   }
+
+/* Language-specific flex direction */
+html[lang="fr"] .about-split {
+  flex-direction: row;
+}
   
   .about-image {
     flex: 1;
