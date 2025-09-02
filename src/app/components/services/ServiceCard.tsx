@@ -12,7 +12,7 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, idx }: ServiceCardProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   return (
     <div className={`service-card card${service.id}`} key={idx}>
@@ -31,9 +31,9 @@ export default function ServiceCard({ service, idx }: ServiceCardProps) {
             <li
               key={i}
               style={{
-                textAlign: 'right',
                 fontSize: '1.1rem',
                 marginBottom: '0.3em',
+                textAlign: language === 'he' ? 'right' : 'left',
               }}>
               {t(clauseKey)}
             </li>

@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { } from 'next/navigation';
+import {} from 'next/navigation';
 import './Nav.css';
 import { PHONE_NUMBER } from '@/utils/constants';
 import { useLanguage } from '@/app/contexts/LanguageContext';
@@ -8,14 +8,14 @@ import { useLanguage } from '@/app/contexts/LanguageContext';
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
-  
 
+  console.log('language: ', language); //removeEytan
   const toggleLanguage = () => {
     const newLanguage = language === 'he' ? 'fr' : 'he';
     setLanguage(newLanguage);
     // Do not navigate; keep SPA state to avoid full rerender
   };
-
+  // style={{flexDirection: language === 'he' ? 'column-reverse' : 'column'}}
   return (
     <nav className="navbar">
       {language === 'he' ? (
@@ -23,11 +23,9 @@ export default function Nav() {
         <>
           <div className="navbar-logo-container">
             <span className="navbar-logo">{t('nav.logo')}</span>
-            <span className="navbar-sub-logo">
-              {t('nav.subLogo')}
-            </span>
+            <span className="navbar-sub-logo">{t('nav.subLogo')}</span>
           </div>
-          
+
           <div className="navbar-controls">
             <button
               className="navbar-hamburger"
@@ -38,7 +36,7 @@ export default function Nav() {
               <span className="hamburger-bar" />
             </button>
           </div>
-          
+
           <div className="navbar-right">
             <a
               href="tel:050-8225023"
@@ -69,7 +67,7 @@ export default function Nav() {
               Heb
             </button>
           </div>
-          
+
           <div className="navbar-controls">
             <button
               className="navbar-hamburger"
@@ -80,16 +78,14 @@ export default function Nav() {
               <span className="hamburger-bar" />
             </button>
           </div>
-          
-          <div className="navbar-logo-container">
+
+          <div className="navbar-logo-container" style={{direction:'ltr'}}>
             <span className="navbar-logo">{t('nav.logo')}</span>
-            <span className="navbar-sub-logo">
-              {t('nav.subLogo')}
-            </span>
+            <span className="navbar-sub-logo">{t('nav.subLogo')}</span>
           </div>
         </>
       )}
-      
+
       {menuOpen && (
         <div className="navbar-overlay" onClick={() => setMenuOpen(false)} />
       )}
