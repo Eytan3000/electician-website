@@ -1,5 +1,6 @@
 'use client';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { translations } from './translations';
 
 export type Language = 'he' | 'fr';
@@ -24,8 +25,19 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+// Client component that handles pathname detection
+function ClientLanguageProvider({ children }: LanguageProviderProps) {
+  const pathname = usePathname();
   const [language, setLanguage] = useState<Language>('he');
+
+  // Update language when pathname changes
+  useEffect(() => {
+    if (pathname === '/fr') {
+      setLanguage('fr');
+    } else {
+      setLanguage('he');
+    }
+  }, [pathname]);
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations[typeof language]] || key;
@@ -36,4 +48,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       {children}
     </LanguageContext.Provider>
   );
+}
+
+// Server-safe wrapper
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+  return <ClientLanguageProvider>{children}</ClientLanguageProvider>;
 };

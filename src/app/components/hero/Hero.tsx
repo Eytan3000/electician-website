@@ -1,3 +1,4 @@
+"use client";
 import { PHONE_NUMBER } from '@/utils/constants';
 import './Hero.css';
 import SmallImages from './SmallImages';

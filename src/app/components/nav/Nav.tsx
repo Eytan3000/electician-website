@@ -72,8 +72,8 @@ export default function Nav() {
             <button
               className="language-switcher"
               onClick={toggleLanguage}
-              aria-label="Switch to French">
-              FR
+              aria-label="Switch to Hebrew">
+              Heb
             </button>
           </div>
           
