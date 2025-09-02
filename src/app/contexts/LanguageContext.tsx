@@ -28,7 +28,10 @@ interface LanguageProviderProps {
 // Client component that handles pathname detection
 function ClientLanguageProvider({ children }: LanguageProviderProps) {
   const pathname = usePathname();
-  const [language, setLanguage] = useState<Language>('he');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Initialize with correct language based on pathname immediately
+    return pathname === '/fr' ? 'fr' : 'he';
+  });
 
   // Update language when pathname changes
   useEffect(() => {

@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { } from 'next/navigation';
 import './Nav.css';
 import { PHONE_NUMBER } from '@/utils/constants';
 import { useLanguage } from '@/app/contexts/LanguageContext';
@@ -8,19 +8,12 @@ import { useLanguage } from '@/app/contexts/LanguageContext';
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
-  const router = useRouter();
-  const pathname = usePathname();
+  
 
   const toggleLanguage = () => {
     const newLanguage = language === 'he' ? 'fr' : 'he';
     setLanguage(newLanguage);
-    
-    // Navigate to appropriate route
-    if (newLanguage === 'fr' && pathname === '/') {
-      router.push('/fr');
-    } else if (newLanguage === 'he' && pathname === '/fr') {
-      router.push('/');
-    }
+    // Do not navigate; keep SPA state to avoid full rerender
   };
 
   return (
