@@ -4,6 +4,7 @@ import {} from 'next/navigation';
 import './Nav.css';
 import { PHONE_NUMBER } from '@/utils/constants';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import { trackPhoneCall, trackLanguageSwitch, trackNavigationClick, trackMenuToggle } from '@/lib/analytics';
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +13,7 @@ export default function Nav() {
   console.log('language: ', language); //removeEytan
   const toggleLanguage = () => {
     const newLanguage = language === 'he' ? 'fr' : 'he';
+    trackLanguageSwitch(language, newLanguage);
     setLanguage(newLanguage);
     // Do not navigate; keep SPA state to avoid full rerender
   };
@@ -30,7 +32,11 @@ export default function Nav() {
             <button
               className="navbar-hamburger"
               aria-label={t('nav.menu')}
-              onClick={() => setMenuOpen((open) => !open)}>
+              onClick={() => {
+                const newState = !menuOpen;
+                setMenuOpen(newState);
+                trackMenuToggle(newState);
+              }}>
               <span className="hamburger-bar" />
               <span className="hamburger-bar" />
               <span className="hamburger-bar" />
@@ -40,7 +46,8 @@ export default function Nav() {
           <div className="navbar-right">
             <a
               href="tel:050-8225023"
-              className={`navbar-phone${menuOpen ? ' open' : ''}`}>
+              className={`navbar-phone${menuOpen ? ' open' : ''}`}
+              onClick={trackPhoneCall}>
               {PHONE_NUMBER}
             </a>
             <button
@@ -57,7 +64,8 @@ export default function Nav() {
           <div className="navbar-left">
             <a
               href="tel:050-8225023"
-              className={`navbar-phone${menuOpen ? ' open' : ''}`}>
+              className={`navbar-phone${menuOpen ? ' open' : ''}`}
+              onClick={trackPhoneCall}>
               {PHONE_NUMBER}
             </a>
             <button
@@ -72,7 +80,11 @@ export default function Nav() {
             <button
               className="navbar-hamburger"
               aria-label={t('nav.menu')}
-              onClick={() => setMenuOpen((open) => !open)}>
+              onClick={() => {
+                const newState = !menuOpen;
+                setMenuOpen(newState);
+                trackMenuToggle(newState);
+              }}>
               <span className="hamburger-bar" />
               <span className="hamburger-bar" />
               <span className="hamburger-bar" />
@@ -91,17 +103,26 @@ export default function Nav() {
       )}
       <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
         <li>
-          <a href="#services" onClick={() => setMenuOpen(false)}>
+          <a href="#services" onClick={() => {
+            trackNavigationClick('services');
+            setMenuOpen(false);
+          }}>
             {t('nav.services')}
           </a>
         </li>
         <li>
-          <a href="#about" onClick={() => setMenuOpen(false)}>
+          <a href="#about" onClick={() => {
+            trackNavigationClick('about');
+            setMenuOpen(false);
+          }}>
             {t('nav.about')}
           </a>
         </li>
         <li>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>
+          <a href="#contact" onClick={() => {
+            trackNavigationClick('contact');
+            setMenuOpen(false);
+          }}>
             {t('nav.contact')}
           </a>
         </li>
