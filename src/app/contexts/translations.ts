@@ -185,7 +185,7 @@ export const translations = {
     // Hero
     'hero.title': 'Électricien certifié à votre service',
     'hero.subtitle': '📍 Service rapide dans toute la région du Sharon',
-    'hero.description': 'Ariel Kriaf est un électricien principal certifié (3X250A) avec plus de 20 ans d\'expérience. Spécialisé dans les travaux électriques pour particuliers et entreprises, diagnostic de pannes, conception et installation de systèmes électriques, modernisation de tableaux électriques, éclairage intelligent et plus encore — en veillant à la sécurité, la fiabilité et le respect des délais.',
+    'hero.description': ' Électricien principal certifié (3X250A) avec plus de 20 ans d\'expérience. Spécialisé dans les travaux électriques pour particuliers et entreprises, diagnostic de pannes, conception et installation de systèmes électriques, modernisation de tableaux électriques, éclairage intelligent et plus encore — en veillant à la sécurité, la fiabilité et le respect des délais.',
     'hero.cta': 'Appelez maintenant',
     
     // Services
@@ -198,7 +198,7 @@ export const translations = {
     
     // About
     'about.title': 'À propos',
-    'about.description': 'Ariel Kriaf est un électricien principal certifié avec plus de 20 ans d\'expérience. Il apporte une expertise riche et offre à chaque client un service professionnel, fiable et attentionné. Il veille à la sécurité maximale, à la qualité du travail sans compromis et à un accueil personnel et chaleureux pour chaque client. Expert dans divers travaux électriques pour appartements, maisons individuelles, immeubles, entreprises et industrie — des installations et modernisations au diagnostic et réparation de pannes — il s\'engage à respecter les délais et à proposer des solutions créatives et précises pour chaque besoin.',
+    'about.description': 'Ariel krief est un électricien principal certifié avec plus de 20 ans d\'expérience. Il apporte une expertise riche et offre à chaque client un service professionnel, fiable et attentionné. Il veille à la sécurité maximale, à la qualité du travail sans compromis et à un accueil personnel et chaleureux pour chaque client. Expert dans divers travaux électriques pour appartements, maisons individuelles, immeubles, entreprises et industrie — des installations et modernisations au diagnostic et réparation de pannes — il s\'engage à respecter les délais et à proposer des solutions créatives et précises pour chaque besoin.',
     'about.alt': 'Électricien professionnel',
     
     // Footer
