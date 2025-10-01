@@ -11,6 +11,7 @@ import FactoryIcon from '../../../app/icons/FactoryIcon';
 import BusinessIcon from '../../../app/icons/BusinessIcon';
 import HomeIcon from '../../../app/icons/HomeIcon';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import { trackEvent } from '@/lib/analytics';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('פרטי');
@@ -46,7 +47,14 @@ export default function Services() {
           <button
             key={tab}
             className={`services-tab${activeTab === tab ? ' active' : ''}`}
-            onClick={() => setActiveTab(tab)}
+            onClick={() => {
+              setActiveTab(tab);
+              trackEvent('service_tab_click', {
+                tab_name: tab,
+                tab_category: tab === 'פרטי' || tab === 'Particulier' ? 'private' :
+                             tab === 'עסקי' || tab === 'Entreprise' ? 'business' : 'industry'
+              });
+            }}
             type="button">
             {tab === 'פרטי' || tab === 'Particulier' ? <HomeIcon /> : null}
             {tab === 'עסקי' || tab === 'Entreprise' ? <BusinessIcon /> : null}

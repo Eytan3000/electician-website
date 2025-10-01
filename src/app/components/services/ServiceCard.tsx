@@ -1,4 +1,6 @@
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import { useEffect, useRef } from 'react';
+import { trackServiceView } from '@/lib/analytics';
 
 interface Service {
   id: string;
@@ -13,9 +15,35 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ service, idx }: ServiceCardProps) {
   const { t, language } = useLanguage();
-  
+  const cardRef = useRef<HTMLDivElement>(null);
+  const hasTracked = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasTracked.current) {
+            trackServiceView(service.id);
+            hasTracked.current = true;
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, [service.id]);
+
   return (
-    <div className={`service-card card${service.id}`} key={idx}>
+    <div ref={cardRef} className={`service-card card${service.id}`} key={idx}>
       <div className="service-icon">
         <span className="circle-icon"></span>
       </div>

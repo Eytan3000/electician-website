@@ -4,6 +4,7 @@ import PolicyModals from './PolicyModals';
 import './Footer.css';
 import { PHONE_NUMBER } from '@/utils/constants';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import { trackPhoneCallFooter, trackEmailClick, trackModalOpen } from '@/lib/analytics';
 
 export default function Footer() {
   const [showAccessibilityModal, setShowAccessibilityModal] = useState(false);
@@ -17,13 +18,14 @@ export default function Footer() {
       <footer className="site-footer" id="contact">
         <div className="footer-columns">
           <div className="footer-col footer-col-contact">
-            <a href={`tel:${PHONE_NUMBER}`} className="footer-link">
+            <a href={`tel:${PHONE_NUMBER}`} className="footer-link" onClick={trackPhoneCallFooter}>
               {PHONE_NUMBER}
             </a>
 
             <a
               href="mailto:ariel.electricity@gmail.com"
-              className="footer-link">
+              className="footer-link"
+              onClick={trackEmailClick}>
               ariel.electricity@gmail.com
             </a>
           </div>
@@ -31,12 +33,18 @@ export default function Footer() {
           <div className="footer-col footer-col-links">
             <p
               className="footer-link"
-              onClick={() => setShowPrivacyModal(true)}>
+              onClick={() => {
+                trackModalOpen('privacy');
+                setShowPrivacyModal(true);
+              }}>
               {t('footer.privacy')}
             </p>
             <p
               className="footer-link"
-              onClick={() => setShowAccessibilityModal(true)}>
+              onClick={() => {
+                trackModalOpen('accessibility');
+                setShowAccessibilityModal(true);
+              }}>
               {t('footer.accessibility')}
             </p>
             <div className="footer-copyright">
