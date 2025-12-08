@@ -168,6 +168,19 @@ html[lang="fr"] .hero-split {
   .hero-content-split h1 {
     font-size: 2rem;
   }
+  html[lang="fr"] .hero-content-split h1 {
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+  }
+  html[lang="fr"] .hero-content-split-header {
+    align-items: flex-start;
+    width: 100%;
+  }
+  html[lang="fr"] .hero-break-after-à::after {
+    content: '\A';
+    white-space: pre;
+  }
   .hero-small-images {
     width: 419px;
     height: 300px;
@@ -175,8 +188,6 @@ html[lang="fr"] .hero-split {
   }
   .hero-small-image-1 {
     display: none;
-  }
-  .hero-small-image-2 {
   }
 
   .hero-content-split p {
@@ -195,5 +206,8 @@ html[lang="fr"] .hero-split {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
+  }
+  html[lang="fr"] .hero-small-image-2 {
+    transform: translateX(-70%);
   }
 }

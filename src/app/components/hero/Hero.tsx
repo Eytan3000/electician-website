@@ -5,13 +5,25 @@ import SmallImages from './SmallImages';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  const renderTitle = () => {
+    const title = t('hero.title');
+    if (language === 'fr' && title === 'Électricien certifié à votre service') {
+      return (
+        <>
+          Électricien certifié <span className="hero-break-after-à">à</span> votre service
+        </>
+      );
+    }
+    return title;
+  };
   
   return (
     <section className="hero-split">
       <div className="hero-content-split">
         <div className="hero-content-split-header">
-          <h1>{t('hero.title')}</h1>
+          <h1>{renderTitle()}</h1>
           <p>{t('hero.subtitle')}</p>
         </div>
         <SmallImages />

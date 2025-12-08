@@ -27,6 +27,9 @@
 .navbar-sub-logo {
   font-size: 0.8rem;
 }
+html[lang="fr"] .navbar-sub-logo {
+  margin-left: 3rem;
+}
 
 .navbar-controls {
   display: flex;
@@ -165,9 +168,13 @@
     left: auto;
     transform: none;
     margin: 0;
+    visibility: hidden;
   }
   .navbar-logo {
     margin-right: auto;
+  }
+  html[lang="fr"] .navbar-logo {
+    margin-left: 3rem;
   }
   .navbar-links.open {
     z-index: 150;

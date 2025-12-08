@@ -176,7 +176,7 @@ export const translations = {
   fr: {
     // Navigation
     'nav.logo': 'Électricité Ariel',
-    'nav.subLogo': 'Électricien principal certifié – Licence n° 111025',
+    'nav.subLogo': 'Licence n° 111025',
     'nav.menu': 'Menu',
     'nav.services': 'Services',
     'nav.about': 'À propos',
