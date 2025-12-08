@@ -28,7 +28,7 @@ export default function Hero() {
         </div>
         <SmallImages />
         <p>
-          <span style={{ fontWeight: 'bold' }}>Ariel Kriaf - </span>
+          <span style={{ fontWeight: 'bold' }}>Ariel krief - </span>
           {t('hero.description')}
         </p>
         <a href={`tel:${PHONE_NUMBER}`} className="cta-button">

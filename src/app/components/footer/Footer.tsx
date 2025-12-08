@@ -10,7 +10,7 @@ export default function Footer() {
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const { t } = useLanguage();
   const email = 'ariel.electricity@gmail.com';
-  const owner = 'Ariel Kriaf';
+  const owner = 'Ariel krief';
 
   return (
     <>

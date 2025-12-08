@@ -12,7 +12,7 @@ export default function About() {
       <div className="about-content-split">
         <h2>{t('about.title')}</h2>
         <p>
-          <span style={{ fontWeight: 'bold' }}>Ariel Kriaf</span>{' '}
+          <span style={{ fontWeight: 'bold' }}>Ariel krief</span>{' '}
           {t('about.description')}
         </p>
       </div>
