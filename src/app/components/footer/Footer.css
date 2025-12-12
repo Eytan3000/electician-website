@@ -8,6 +8,11 @@
   padding: 4rem 7rem;
 }
 
+html[lang="fr"] .site-footer {
+  direction: ltr;
+  text-align: left;
+}
+
 .footer-columns {
   /* max-width: 1200px; */
   margin: 0 auto;
@@ -18,12 +23,21 @@
   /* gap: 2rem; */
 }
 
+html[lang="fr"] .footer-columns {
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
 .footer-col {
   /* flex: 1 1 250px; */
   min-width: 200px;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+}
+
+html[lang="fr"] .footer-col {
+  align-items: flex-start;
 }
 
 .footer-col-center {

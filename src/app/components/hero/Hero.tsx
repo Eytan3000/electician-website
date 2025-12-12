@@ -24,10 +24,10 @@ export default function Hero() {
       <div className="hero-content-split">
         <div className="hero-content-split-header">
           <h1>{renderTitle()}</h1>
-          <p>{t('hero.subtitle')}</p>
+          <p className="hero-subtitle">{t('hero.subtitle')}</p>
         </div>
         <SmallImages />
-        <p>
+        <p className="hero-description">
           <span style={{ fontWeight: 'bold' }}>Ariel krief - </span>
           {t('hero.description')}
         </p>
